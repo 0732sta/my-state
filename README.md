@@ -1,5 +1,5 @@
 # my-state
-[Demo](https://codesandbox.io/s/react-chartjs-2-map-forked-4l24pw?file=/src/geo-map.tsx:0-2267).
+[Demo](https://codesandbox.io/s/react-chartjs-2-map-forked-4l24pw?file=/src/geo-map.tsx:0-2267). <br>
 map reference source from https://github.com/markmarkoh/datamaps/blob/master/src/js/data/mys.topo.json <br>
 raw source to apply Malaysia map https://raw.githubusercontent.com/markmarkoh/datamaps/master/src/js/data/mys.topo.json
 
