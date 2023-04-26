@@ -45,32 +45,32 @@ export default function Map() {
         datasets: [
           {
             outline: data,
-            label: "Dataset 1",
+            label: "Completed",
             data: data.map((d: any) => ({
               feature: d,
-              value: Math.random() * 10
-            }))
-            // backgroundColor: ["#94BA62", "#59A22F", "#1A830C"]
+              value: Math.round(Math.random() * 100)
+            })),
+            backgroundColor: ["#94BA62", "#59A22F", "#1A830C"]
           },
           {
             outline: data,
-            label: "Dataset 2",
+            label: "In progress",
             data: data.map((d: any) => ({
               feature: d,
-              value: Math.random() * 10
-            }))
-            // backgroundColor: ["#94BA62", "#59A22F", "#1A830C"]
+              value: Math.round(Math.random() * 100)
+            })),
+            backgroundColor: ["#FFD700", "#FFA500", "#FF8C00"]
           }
         ]
       }}
       options={{
         showOutline: true,
-        showGraticule: true,
+        showGraticule: false,
         plugins: {
           tooltip: {
             callbacks: {
               label: (context: any) => {
-                return `${context.element.feature.properties.name} - ${context.dataset.label}: ${context.formattedValue}`;
+                return `${context.element.feature.properties.name} - ${context.dataset.label}: ${context.formattedValue}%`;
               }
             }
           },
@@ -84,11 +84,11 @@ export default function Map() {
         scales: {
           xy: {
             projection: "mercator"
+          },
+          //Hide color scale
+          color: {
+            display: false
           }
-          // Hide color scale
-          // color: {
-          //   display: false
-          // }
         }
       }}
     />
